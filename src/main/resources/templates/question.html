@@ -1,0 +1,58 @@
+<div class="container-fluid" style="background-color: #e9f5f8">
+    <br>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <a href="/" class="btn btn-outline-light"
+               style="background-color:#D58F76; border: none; margin-bottom: 30px;  color:white; font-size: 20px; padding:12px">НАЗАД</a>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <div class="row" id="question">
+                <div class="d-flex justify-content-end d-flex align-items-start">
+                    <!--                    <span th:if="${teacher.gender == 'F'}">Female</span>-->
+                    <h1 class="text-black" style="font-size: 75px">ВАШИ ПРАШАЊА</h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <br><br>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <a href="/questions/askQuestion"
+                                  class="btn btn-primary"
+                                  style="background-color:#D58F76; border-color:#D58F76; font-size: 20px">
+            Постави прашање</a>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-10">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <tbody>
+                    <tr th:each="question : ${questionList}" class="product">
+                        <td th:text="${question.getContent()}"></td>
+                        <td>
+                        <button type="submit"
+                                class="btn btn-sm btn-primary cart-product">
+                            <i class="fa fa-trash">...</i>
+                        </button>
+
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>

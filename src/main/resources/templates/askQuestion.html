@@ -1,0 +1,67 @@
+<div class="container-fluid" style="background-color: #e9f5f8">
+    <br>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <a href="/questions" class="btn btn-outline-light"
+               style="background-color:#D58F76; border: none; margin-bottom: 30px;  color:white; font-size: 20px; padding:12px">НАЗАД</a>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10" id="brownBig">
+            <br>
+            <br><br>
+            <div class="row d-flex align-items-center">
+                <div class="col-md-5" id="appointment">
+
+                </div>
+                <div class="col-md-7" style="background-color: #e9f5f8">
+                    <form action="/questions/askQuestion" method="post">
+                        <p class="text-center">Постави прашање</p>
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <label>Име</label>
+                                <input class="form-control" placeholder="Име">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <label>Е-пошта адреса<small style="color:red">*</small></label>
+                                <input class="form-control" placeholder="Е-пошта" id="email" name="email" required>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <label>Прашање <small style="color:red">*</small></label>
+                                <input class="form-control" placeholder="Прашање" required name="question">
+                            </div>
+                        </div>
+                        <br>
+                        <div th:if="${hasError}">
+                            <div th:text="${error}" class="text-danger"></div>
+                        </div>
+                        <br>
+                        <div class="col text-center">
+                            <button type="submit"
+                                    class="btn btn-primary"
+                                    style="background-color:#D58F76; border-color:#D58F76; font-size: 20px">
+                                ПРАТИ</button>
+                            <a href="/questions" class="btn btn-danger" role="button"
+                               style="background-color:orangered; border-color:orangered; font-size: 20px">
+                                ОТКАЖИ</a>
+                        </div>
+                        <br>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-1"></div>
+
+    </div>
+    <br><br>
+    <div style="height: 400px; background-color: #e9f5f8"> <br><br></div>
+</div>

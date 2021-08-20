@@ -1,0 +1,48 @@
+#people{
+    background-image: url('../images/people.jpg');
+    background-size: 100% 100%;
+    height:80vh;
+}
+#education {
+    background-image: url('../images/educationImage.jpg');
+    background-size: 100% 100%;
+    height:65vh;
+}
+#question {
+    background-image: url('../images/question.png');
+    background-size: 100% 100%;
+    height:55vh;
+}
+#blue {
+    background-image: url('../images/blue.jpg');
+    background-size: 100% 100%;
+    height:50vh;
+}
+#brown{
+    background-image: url('../images/brown.jpg');
+    background-size: 100% 100%;
+    height:50vh;
+}
+#brownBig{
+    background-image: url('../images/brown.jpg');
+    background-size: 100% 100%;
+    height:60vh;
+}
+#brownSmall{
+    background-image: url('../images/brown.jpg');
+    background-size: 100% 100%;
+    height:20vh;
+}
+#psychologist{
+    background-image: url('../images/PSYCHOLOGIST.jpg');
+    background-size: 100% 100%;
+    height:90vh;
+}
+#appointment{
+    background-image: url('../images/appointment.jpg');
+    background-size: 100% 100%;
+    height:37vh;
+}
+body {
+    font-size: 20px !important;
+}

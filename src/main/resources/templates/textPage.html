@@ -1,0 +1,41 @@
+<div class="container-fluid" style="background-color: #e9f5f8">
+    <br>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <a href="/" class="btn btn-outline-light"
+               style="background-color:#D58F76; border: none; margin-bottom: 30px;  color:white; font-size: 20px; padding:12px">НАЗАД</a>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <div class="row" id="education">
+                <div class="d-flex justify-content-end d-flex align-items-center">
+<!--                    <span th:if="${teacher.gender == 'F'}">Female</span>-->
+                    <h1 class="text-black" style="font-size: 75px"
+                        th:if="${flag=='t'}" th:text="${texts[0].getCategory()}"></h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <div class="row p-4" th:each="result: ${texts}">
+        <div class="col-md-12 d-flex  justify-content-center">
+            <div class="card " style="width: 40rem;">
+                <img th:src="${result.getPhotoUrl()}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <span th:text="${result.getCategory()}"></span>
+                    <h5 class="card-title" th:text="${result.getTitle()}"></h5>
+                    <p class="card-text" th:text="${result.getContent().substring(0,50)}+'...'">
+                    </p>
+                    <a th:href="@{'/text/get/{id}' (id=${result.getId()})}"
+                       class="btn btn-primary"
+                       style="background-color:#D58F76; border-color:#D58F76; font-size: 20px">
+                        Прочитај повеќе</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
